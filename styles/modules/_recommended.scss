@@ -1,0 +1,86 @@
+@use "../base/variables" as *;
+
+.recommended {
+  background: $clr-bg;
+  padding: 30px 0;
+
+  & .subtitle {
+    margin-bottom: 10px;
+  }
+
+  & .hero {
+    margin-bottom: 30px;
+    display: inline-block;
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+
+  &_card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background: $clr-white;
+    overflow: hidden;
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      gap: 15px;
+      padding: 30px;
+    }
+  }
+
+  &_img {
+    @include flex();
+    max-width: 100%;
+    height: 100%;
+    max-height: 200px;
+    min-height: 200px;
+
+    & img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &_hr {
+    width: 100%;
+    height: 4px;
+    background: $clr-separator;
+  }
+
+  & .paragraph-m {
+    color: $clr-black;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .recommended {
+    &-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &_card:nth-child(3) {
+      grid-column: 1/3;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .recommended {
+    &-grid {
+      grid-template-columns: 1fr;
+    }
+
+    &_card:nth-child(3) {
+      grid-column: 1/2;
+    }
+  }
+}

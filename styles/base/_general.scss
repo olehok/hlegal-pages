@@ -1,0 +1,286 @@
+@use "variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.5s ease;
+
+  &:hover {
+    color: $clr-accent;
+  }
+}
+
+//titles
+
+.hero {
+  @include fonts(700, 38px, 46px, $clr-main);
+}
+
+.hero-2 {
+  @include fonts(700, 30px, 37px, $clr-main);
+}
+
+.hero-3 {
+  @include fonts(700, 22px, 27px, $clr-main);
+}
+
+.hero-4 {
+  @include fonts(700, 16px, 20px, $clr-txt);
+}
+
+.hero-5 {
+  @include fonts(700, 12px, 15px, $clr-txt);
+}
+
+.hero-xl {
+  @include fonts(700, 96px, 117px, $clr-white);
+  text-align: center;
+  letter-spacing: 63px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+}
+
+.hero-l {
+  @include fonts(700, 36px, 44px);
+  @include fontsgrad();
+}
+
+.hero-page {
+  display: inline-block;
+  @include fonts(400, 36px, 44px, $clr-main);
+}
+
+.subtitle {
+  @include fonts(700, 14px, 17px, $clr-regular);
+}
+
+a.subtitle {
+  display: inline-block;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    margin: 0 0.25em 0.1em;
+    width: 0.4em;
+    height: 0.4em;
+    border-top: 0.15em solid $clr-regular;
+    border-right: 0.15em solid $clr-regular;
+    transform: rotate(45deg);
+    transition: 0.5s ease;
+  }
+
+  &:hover {
+    &::after {
+      border-color: $clr-accent;
+    }
+  }
+}
+
+//regular font
+
+.paragraph {
+  @include fonts();
+}
+
+.paragraph-xl {
+  @include fonts(400, 21px, 30px);
+}
+
+.paragraph-l {
+  @include fonts(400, 19px, 30px, $clr-white);
+}
+
+.paragraph-m {
+  @include fonts(400, 14px, 22px, $clr-txt);
+}
+
+.caps {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+//colors
+
+.active-grad {
+  @include fontsgrad();
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    background: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: $clr-accent;
+    background-clip: text;
+    text-fill-color: $clr-accent;
+  }
+}
+
+.active-accent {
+  color: $clr-accent;
+}
+
+.active-blue {
+  color: $clr-active;
+}
+
+.blue-regular {
+  color: $clr-regular;
+}
+
+.main {
+  color: $clr-main;
+}
+
+.grey {
+  color: $clr-txt;
+}
+
+.white {
+  color: $clr-white;
+}
+
+.black {
+  color: $clr-black;
+}
+
+//colors svg
+
+.fill-1 {
+  fill: $clr-accent;
+}
+
+.fill-2 {
+  fill: $clr-white;
+}
+
+.fill-3 {
+  fill: $clr-main;
+}
+
+.fill-4 {
+  fill: $clr-regular;
+}
+
+.fill-5 {
+  fill: $clr-txt;
+}
+
+//common
+
+.container {
+  display: block;
+  margin: 0 auto;
+  padding: 0 60px;
+  max-width: 1720px;
+  width: 100%;
+
+  &-l {
+    margin: 0 auto;
+    max-width: 1720px;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.border-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dot-separator {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $clr-separator;
+}
+
+.slider {
+  margin: 30px auto 0;
+  @include flex();
+  gap: 15px;
+
+  li {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: $clr-regular;
+    opacity: 0.2;
+    cursor: pointer;
+    transition: 0.5s;
+
+    button {
+      display: none;
+    }
+
+    &.slick-active {
+      opacity: 1;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero-xl {
+    @include fonts(700, 86px, 105px, $clr-white);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .hero-xl {
+    @include fonts(700, 46px, 56px, $clr-white);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding: 0 30px;
+
+    &-s {
+      display: block;
+      padding: 0;
+    }
+  }
+
+  .hero-page {
+    @include fonts(400, 20px, 24px);
+
+    &_dark {
+      color: $clr-white;
+    }
+  }
+
+  .hero {
+    @include fonts(700, 30px, 37px, $clr-main);
+
+  }
+
+  .hero-xl {
+    @include fonts(700, 36px, 44px, $clr-white);
+    letter-spacing: 13px;
+  }
+}

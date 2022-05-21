@@ -1,0 +1,82 @@
+@use "../base/variables" as *;
+
+.footer {
+  background: $clr-bg;
+  padding-bottom: 30px;
+
+  &_hr {
+    margin-bottom: 30px;
+    height: 2px;
+    background: $clr-separator;
+  }
+
+  &-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+  }
+
+  &_contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+
+    &-row {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  & .dot-separator {
+    background: $clr-txt;
+  }
+}
+
+.fb-footer {
+  display: inline-block;
+
+  &:hover {
+    fill: $clr-accent;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+    &-flex {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      max-width: 400px;
+      gap: 25px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 575px) {
+  .footer {
+    &_contacts {
+      align-items: center;
+
+      &-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+
+    & .dot-separator {
+      display: none;
+    }
+
+  }
+}

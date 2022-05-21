@@ -1,0 +1,153 @@
+@use "../base/variables" as *;
+
+.splash {
+  position: relative;
+  margin-bottom: 20px;
+  background: $clr-grad-supersoft;
+  border-radius: 0 0 12px 12px;
+
+  .symbol-wrap {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &::before {
+    content: "";
+    margin: 0 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    display: block;
+    height: 10px;
+    border-radius: 0 0 10px 10px;
+    background: #CACADB;
+  }
+
+  &::after {
+    content: "";
+    margin: 0 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    display: block;
+    height: 10px;
+    border-radius: 0 0 10px 10px;
+    background: #E7E7F2;
+  }
+
+  .header {
+    position: relative;
+    z-index: 10;
+  }
+
+  &-title {
+    position: relative;
+    margin-bottom: 60px;
+    padding: 296px 0 477px;
+    z-index: 1;
+
+    & .hero {
+      text-align: center;
+      color: $clr-white;
+    }
+  }
+}
+
+#symbol {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+  display: block;
+  max-height: 1000px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-scroll {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  transition: 0.5s ease;
+
+  &_circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid $clr-white;
+    opacity: 0.5;
+  }
+
+  &_arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%) rotate(45deg);
+    width: 14px;
+    height: 14px;
+    border-right: 2px solid $clr-white;
+    border-bottom: 2px solid $clr-white;
+  }
+
+  &:hover &_circle, &:hover &_arrow {
+    border-color: $clr-accent;
+  }
+}
+
+@media screen and (max-width: 1441px) {
+  .splash {
+    &-title {
+      padding: 196px 0 377px;
+    }
+  }
+
+  #symbol {
+    max-height: 800px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .splash {
+    &-title {
+      padding: 180px 0 361px;
+    }
+  }
+
+  #symbol {
+    max-height: 768px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .splash {
+    &-title {
+      padding: 203px 0 489px;
+    }
+  }
+
+  #symbol {
+    max-height: 1024px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .splash {
+    &-title {
+      margin-bottom: 30px;
+      min-height: 467px;
+      padding: 100px 0 229px;
+
+      .hero {
+        @include fonts(700, 38px, 46px, $clr-white);
+      }
+    }
+  }
+
+  #symbol {
+    max-height: 600px;
+  }
+}
