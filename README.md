@@ -1,6 +1,6 @@
 # the-final-course-project
 
-https://lhkvlnk.github.io/ok-hillel/
+<a href="https://olehok.github.io/ok-hillel/">link</a>
 
-the final project at front-end basic course.
-used animation, grid, flex, sass, responsive, slider.
+my final project of front-end basic course.
+technics used: animation, grid, flex, sass, responsive, slider (js).
