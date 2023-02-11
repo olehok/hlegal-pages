@@ -1,4 +1,4 @@
-# The course main project
+# The main course project
 
 <a href="https://olehok.github.io/ok-hillel/">link</a>
 
