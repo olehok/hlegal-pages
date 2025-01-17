@@ -295,7 +295,6 @@ a.subtitle:hover::after {
   .container {
     max-width: 768px;
   }
-
   .hero-xl {
     font-style: normal;
     font-weight: 700;
@@ -313,7 +312,6 @@ a.subtitle:hover::after {
     display: block;
     padding: 0;
   }
-
   .hero-page {
     font-style: normal;
     font-weight: 400;
@@ -324,7 +322,6 @@ a.subtitle:hover::after {
   .hero-page_dark {
     color: #fff;
   }
-
   .hero {
     font-style: normal;
     font-weight: 700;
@@ -332,7 +329,6 @@ a.subtitle:hover::after {
     line-height: 37px;
     color: #323264;
   }
-
   .hero-xl {
     font-style: normal;
     font-weight: 700;
@@ -438,7 +434,8 @@ a.subtitle:hover::after {
 .achievements_item img {
   height: 100%;
   max-width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .hero {
@@ -455,20 +452,16 @@ a.subtitle:hover::after {
     padding: 0;
     max-width: 904px;
   }
-
   .text-wrap {
     padding: 0 30px 0 0;
   }
-
   .advantages-wrap {
     max-width: 388px;
     padding: 0 0 0 30px;
   }
-
   .team-photo {
     padding: 100px 0;
   }
-
   .more h3 {
     max-width: 388px;
     padding: 0 0 0 26px;
@@ -482,27 +475,22 @@ a.subtitle:hover::after {
     gap: 30px;
     margin-bottom: 60px;
   }
-
   .text-wrap {
     padding: 0;
   }
-
   .advantages-wrap {
     max-width: 100%;
     width: 100%;
     border-left: 4px solid #E6E6F0;
     padding: 0 0 0 30px;
   }
-
   .team-photo {
     padding: 90px 0;
   }
-
   .more h3 {
     max-width: 100%;
     padding: 0;
   }
-
   .achievements_item {
     max-height: 90px;
   }
@@ -511,7 +499,6 @@ a.subtitle:hover::after {
   .intro-flex {
     margin-bottom: 30px;
   }
-
   .achievements .container {
     padding: 0 10px;
   }
@@ -520,7 +507,6 @@ a.subtitle:hover::after {
   .team-photo {
     padding: 35px 0;
   }
-
   .achievements .container {
     padding: 0 60px;
   }
@@ -591,6 +577,10 @@ a.subtitle:hover::after {
   height: 2px;
   background: #F0145A;
   opacity: 1;
+}
+.header_nav-link.active-accent:hover::after {
+  background: #fff;
+  color: #fff;
 }
 .header_nav-link::after {
   position: absolute;
@@ -691,7 +681,6 @@ a.subtitle:hover::after {
   .header_mob {
     display: flex;
   }
-
   .logo-svg {
     width: 130px;
     height: 61px;
@@ -735,11 +724,9 @@ a.subtitle:hover::after {
     width: 100%;
     padding: 0 15px;
   }
-
   .fb-header {
     display: none;
   }
-
   .logo-svg {
     width: 70px;
     height: 32px;
@@ -752,12 +739,10 @@ a.subtitle:hover::after {
     justify-content: center;
     align-items: start;
   }
-
   .slash-svg {
     max-width: 12px;
     max-height: 26px;
   }
-
   .btn-hamburger {
     display: inline-flex;
     justify-self: end;
@@ -844,6 +829,4 @@ a.subtitle:hover::after {
   .footer .dot-separator {
     display: none;
   }
-}
-
-/*# sourceMappingURL=main-about.css.map */
+}/*# sourceMappingURL=main-about.css.map */

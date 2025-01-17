@@ -1,0 +1,65 @@
+@use "../base/variables" as *;
+
+.publications {
+  // padding: 60px 0 0;
+  background-color: $clr-bg;
+
+  &-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 30px;
+    padding: 30px 0;
+  }
+}
+
+.btn {
+  &-pub {
+    display: inline-block;
+    width: fit-content;
+    // border: 0;
+    border-radius: 12px;
+    padding: 18px 30px;
+    text-align: center;
+    background: $clr-regular;
+    box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+
+    &:hover {
+      color: $clr-white;
+      background: $clr-hover;
+    }
+
+    &:active {
+      background: $clr-active;
+    }
+  }
+  &-switch {
+    display: inline-block;
+    width: fit-content;
+    // border: 0;
+    border-radius: 10px;
+    padding: 8px 30px 10px;
+    text-align: center;
+    // background: $clr-regular;
+    // box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+
+    &:hover {
+      color: $clr-white;
+      background: $clr-txt;
+    }
+
+    &:active {
+      background: $clr-active;
+    }
+  }
+  &-active {
+    background: $clr-white;
+  }
+}
+
+.wrap-switch {
+  border: 2px solid $clr-separator;
+  border-radius: 12px;
+  background: $clr-separator;
+}

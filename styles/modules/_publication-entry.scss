@@ -1,0 +1,13 @@
+.publication {
+  background-color: aqua;
+  padding: 60px 0 60px;
+  &-flex {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* .publication-flex {
+  display: flex;
+  flex-direction: column;
+} */

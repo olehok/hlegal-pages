@@ -11,6 +11,10 @@
     overflow: hidden;
   }
 
+  &.services-add {
+    margin-bottom: 80px;
+  }
+
   &::before {
     content: "";
     margin: 0 20px;
@@ -21,7 +25,7 @@
     display: block;
     height: 10px;
     border-radius: 0 0 10px 10px;
-    background: #CACADB;
+    background: #cacadb;
   }
 
   &::after {
@@ -34,7 +38,7 @@
     display: block;
     height: 10px;
     border-radius: 0 0 10px 10px;
-    background: #E7E7F2;
+    background: #e7e7f2;
   }
 
   .header {
@@ -93,7 +97,8 @@
     border-bottom: 2px solid $clr-white;
   }
 
-  &:hover &_circle, &:hover &_arrow {
+  &:hover &_circle,
+  &:hover &_arrow {
     border-color: $clr-accent;
   }
 }
