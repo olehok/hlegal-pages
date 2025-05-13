@@ -2,4 +2,4 @@
 Diploma project for Frontend Basic course. Used HTML, CSS, SCSS, mixins, modules, responsive design. 
 Built based on a pre-designed mockup.
 
-https://olehok.github.io/HLEGAL-pages/
+https://olehok.github.io/hlegal-pages/
